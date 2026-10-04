@@ -8,7 +8,9 @@ $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $updated = $student->update($id, [
         'Produect_name' => $_POST['Produect_name'] ?? '',
+        'Category' => $_POST['Category'] ?? '',
         'Descrivtion' => $_POST['Descrivtion'] ?? '',
+        'price' => $_POST['price'] ?? '',
         'Quantity' => $_POST['Quantity'] ?? ''
     ]);
 
@@ -36,7 +38,9 @@ if (!$row) {
     <h3>Product update form</h3>
     <form action="" method="post">
         <input type="text" name="Produect_name" placeholder="Enter product name" value="<?php echo htmlspecialchars($row['Produect_name']); ?>" required><br><br>
+        <input type="text" name="Category" placeholder="Enter category" value="<?php echo htmlspecialchars($row['Category']); ?>" required><br><br>
         <input type="text" name="Descrivtion" placeholder="Enter description" value="<?php echo htmlspecialchars($row['Descrivtion']); ?>" required><br><br>
+             <input type="number" name="price" placeholder="Enter price" value="<?php echo htmlspecialchars($row['price']); ?>" required><br><br>
         <input type="number" name="Quantity" placeholder="Enter quantity" value="<?php echo htmlspecialchars($row['Quantity']); ?>" required><br><br>
         <input type="submit" name="submit" value="UPDATE"><br><br>
     </form>

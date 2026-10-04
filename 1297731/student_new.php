@@ -7,7 +7,9 @@ $student = new Student($conn);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $created = $student->create([
         'Produect_name' => $_POST['Produect_name'] ?? '',
+        'Category' => $_POST['Category'] ?? '',
         'Descrivtion' => $_POST['Descrivtion'] ?? '',
+        'price' => $_POST['price'] ?? '',
         'Quantity' => $_POST['Quantity'] ?? ''
     ]);
 
@@ -40,8 +42,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input type="text" id="Produect_name" name="Produect_name" placeholder="Enter product name" required>
                     </div>
                     <div>
+                        <label for="Category">Category</label>
+                        <input type="text" id="Category" name="Category" placeholder="Enter category" required>
+                    </div>
+                    
+                    <div>
                         <label for="Descrivtion">Description</label>
                         <input type="text" id="Descrivtion" name="Descrivtion" placeholder="Enter description" required>
+                    </div>
+                    <div>
+                        <label for="price">Price</label>
+                        <input type="number" id="price" name="price" placeholder="Enter price" required>
                     </div>
                 </div>
 

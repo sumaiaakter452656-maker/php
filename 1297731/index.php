@@ -21,7 +21,9 @@ $products = $student->getAll();
         <tr>
             <th>ID</th>
             <th>Product Name</th>
+            <th>Category</th>
             <th>Description</th>
+            <th>Price</th>
             <th>Quantity</th>
         </tr>
 
@@ -29,7 +31,9 @@ $products = $student->getAll();
         <tr>
             <td><?php echo htmlspecialchars($row['id']); ?></td>
             <td><?php echo htmlspecialchars($row['Produect_name']); ?></td>
+            <td><?php echo htmlspecialchars($row['Category']); ?></td>
             <td><?php echo htmlspecialchars($row['Descrivtion']); ?></td>
+            <td><?php echo htmlspecialchars($row['price']); ?></td>
             <td><?php echo htmlspecialchars($row['Quantity']); ?></td>
 
             <td class="action">

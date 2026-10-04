@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2026 at 10:32 AM
+-- Generation Time: Oct 04, 2026 at 05:11 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -30,7 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `producet_list` (
   `id` int(15) NOT NULL,
   `Produect_name` varchar(100) NOT NULL,
+  `Category` varchar(50) NOT NULL,
   `Descrivtion` varchar(500) NOT NULL,
+  `price` int(12) NOT NULL,
   `Quantity` int(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -38,8 +40,9 @@ CREATE TABLE `producet_list` (
 -- Dumping data for table `producet_list`
 --
 
-INSERT INTO `producet_list` (`id`, `Produect_name`, `Descrivtion`, `Quantity`) VALUES
-(1, 'shirt', 'tfgghydryg', 50);
+INSERT INTO `producet_list` (`id`, `Produect_name`, `Category`, `Descrivtion`, `price`, `Quantity`) VALUES
+(1, 'shirt', '', 'tfgghydryg', 0, 50),
+(2, 'er', '', 'sedr', 0, -2);
 
 --
 -- Indexes for dumped tables
@@ -59,7 +62,7 @@ ALTER TABLE `producet_list`
 -- AUTO_INCREMENT for table `producet_list`
 --
 ALTER TABLE `producet_list`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
