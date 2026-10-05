@@ -9,7 +9,11 @@
 
 
 <?php
-echo 'hello ';
+
+$name = 'world';
+$id = "name" ;
+
+echo "'hello ' . $id";
 ?>
 
 </body>
