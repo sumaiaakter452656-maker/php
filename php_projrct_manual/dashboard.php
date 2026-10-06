@@ -1,3 +1,10 @@
+<?php
+ session_start();
+ if($_SESSION['email']!=true){
+    header("location: index.php");
+ }
+?>
+
 <?php include 'dbconfig.php'; ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
@@ -9,6 +16,14 @@
     <?php include 'partials/home_styles.php'; ?>   
   </head>
   <body>
+    <?php 
+   
+    print_r($_SESSION);
+    ?>
+    <a href="logout.php">Logout</a>
+
+
+    
 
     <!--start header-->
     <?php include 'partials/header.php'; ?>

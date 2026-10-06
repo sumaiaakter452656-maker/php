@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/dark-theme.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
