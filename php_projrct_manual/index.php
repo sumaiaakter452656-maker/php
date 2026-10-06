@@ -1,3 +1,4 @@
+<?php include 'dbconfig.php'; ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
 
