@@ -1,3 +1,4 @@
+//index page
 <?php
  session_start();
  if($_SESSION['email']!=true){
@@ -22,8 +23,6 @@
     ?>
     <a href="logout.php">Logout</a>
 
-
-    
 
     <!--start header-->
     <?php include 'partials/header.php'; ?>
