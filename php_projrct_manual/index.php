@@ -1,6 +1,27 @@
+<?php 
+session_start();
+if(isset($_POST['login_button'])){
+    extract($_POST);
+    $password = md5($password);
+    include_once 'dbconfig.php';
+
+    $result = $conn->query("SELECT * FROM `users` WHERE email = '$email' AND password = '$password'");
+
+    //$row =$ result->fetch_assoc();
+    
+    if($result->num_rows > 0){
+      //sesssion_start();
+        $_SESSION['name'] = $result->fetch_assoc()['name'];
+        $_SESSION['email'] = $email;
+        header("Location: dashboard.php");
+        exit;
+    } else {
+        $login_error = "Login Failed";
+    }
+}
+?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,8 +43,7 @@
 </head>
 
 <body>
-
-
+   <?php if(isset($login_error)) { echo "<div class='alert alert-danger text-center'>$login_error</div>"; } ?>
   <!--authentication-->
 
   <div class="section-authentication-cover">
@@ -63,16 +83,19 @@
                 <div class="line"></div>
               </div>
 
+
+              //
+
               <div class="form-body mt-4">
-                <form class="row g-3">
+                <form class="row g-3" method="POST" class="login-form">
                   <div class="col-12">
                     <label for="inputEmailAddress" class="form-label">Email</label>
-                    <input type="email" class="form-control  border-3" id="inputEmailAddress" placeholder="jhon@example.com">
+                    <input type="email" class="form-control  border-3" id="inputEmailAddress" placeholder="Enter Email Address" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>">
                   </div>
                   <div class="col-12">
                     <label for="inputChoosePassword" class="form-label">Password</label>
                     <div class="input-group" id="show_hide_password">
-                      <input type="password" class="form-control border-end-0  border-3" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> 
+                      <input type="password" class="form-control border-end-0  border-3" id="inputChoosePassword" name="password" value="<?php if(isset($_POST['password'])) echo $_POST['password']; ?>"  placeholder="Enter Password"> 
                       <a href="javascript:;" class="input-group-text bg-transparent  border-3"><i class="bi bi-eye-slash-fill"></i></a>
                     </div>
                   </div>
@@ -86,7 +109,8 @@
                   </div>
                   <div class="col-12">
                     <div class="d-grid">
-                      <button type="submit" class="btn  border-3 btn-primary">Login</button>
+                      
+                      <button type="submit" name="login_button" class="btn  border-3 btn-primary">Login</button>
                     </div>
                   </div>
                   <div class="col-12">

@@ -197,7 +197,7 @@
                     </li>
                     <li><a class="has-arrow" href="javascript:;"><span class="material-symbols-outlined">arrow_right</span>Cover</a>
                       <ul>
-                        <li><a href="auth-cover-login.html" target="_blank"><span class="material-symbols-outlined">arrow_right</span>Login</a></li>
+                        <li><a href="index.php"><span class="material-symbols-outlined">arrow_right</span>Login</a></li>
                         <li><a href="auth-cover-reset-password.html" target="_blank"><span class="material-symbols-outlined">arrow_right</span>Register</a></li>
                         <li><a href="auth-cover-forgot-password.html" target="_blank"><span class="material-symbols-outlined">arrow_right</span>Forgot Password</a></li>
                         <li><a href="auth-cover-reset-password.html" target="_blank"><span class="material-symbols-outlined">arrow_right</span>Reset Password</a></li>
@@ -335,7 +335,7 @@
                 </div>
               </div>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="javascript:;"><span class="material-symbols-outlined me-2">
+                <li><a class="dropdown-item" href="logout.php"><span class="material-symbols-outlined me-2">
                   account_circle
                   </span><span>Profile</span></a>
                 </li>

@@ -1,22 +1,7 @@
-<?php 
-session_start();
-if(isset($_POST['login_button'])){
-    extract($_POST);
-    $password = md5($password);
-    include_once 'dbconfig.php';
-
-    $result = $conn->query("SELECT * FROM `udm` WHERE email = '$email' AND password = '$password'");
-    if($result->num_rows > 0){
-        $_SESSION['email'] = $email;
-        header("Location: dashbord.php");
-        exit;
-    } else {
-        $login_error = "Login Failed";
-    }
-}
-?>
+<?php $loginError = $loginError ?? ''; $loginNotice = $loginNotice ?? ''; ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +23,8 @@ if(isset($_POST['login_button'])){
 </head>
 
 <body>
-   <?php if(isset($login_error)) { echo "<div class='alert alert-danger text-center'>$login_error</div>"; } ?>
+
+
   <!--authentication-->
 
   <div class="section-authentication-cover">
@@ -79,15 +65,25 @@ if(isset($_POST['login_button'])){
               </div>
 
               <div class="form-body mt-4">
-                <form class="row g-3" method="POST" class="login-form">
+                <form class="row g-3" method="post" action="index.php">
+                  <?php if ($loginNotice !== ''): ?>
+                    <div class="col-12">
+                      <div class="alert alert-success mb-0" role="status"><?= htmlspecialchars($loginNotice, ENT_QUOTES, 'UTF-8') ?></div>
+                    </div>
+                  <?php endif; ?>
+                  <?php if ($loginError !== ''): ?>
+                    <div class="col-12">
+                      <div class="alert alert-danger mb-0" role="alert"><?= htmlspecialchars($loginError, ENT_QUOTES, 'UTF-8') ?></div>
+                    </div>
+                  <?php endif; ?>
                   <div class="col-12">
                     <label for="inputEmailAddress" class="form-label">Email</label>
-                    <input type="email" class="form-control  border-3" id="inputEmailAddress" placeholder="Enter Email Address" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>">
+                    <input type="email" class="form-control border-3" id="inputEmailAddress" name="email" placeholder="jhon@example.com" autocomplete="email" required>
                   </div>
                   <div class="col-12">
                     <label for="inputChoosePassword" class="form-label">Password</label>
                     <div class="input-group" id="show_hide_password">
-                      <input type="password" class="form-control border-end-0  border-3" id="inputChoosePassword" name="password" value="<?php if(isset($_POST['password'])) echo $_POST['password']; ?>"  placeholder="Enter Password"> 
+                      <input type="password" class="form-control border-end-0 border-3" id="inputChoosePassword" name="password" placeholder="Enter Password" autocomplete="current-password" required>
                       <a href="javascript:;" class="input-group-text bg-transparent  border-3"><i class="bi bi-eye-slash-fill"></i></a>
                     </div>
                   </div>
@@ -101,13 +97,12 @@ if(isset($_POST['login_button'])){
                   </div>
                   <div class="col-12">
                     <div class="d-grid">
-                      
-                      <button type="submit" name="login_button" class="btn  border-3 btn-primary">Login</button>
+                      <button type="submit" class="btn  border-3 btn-primary">Login</button>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="text-start">
-                      <p class="mb-0">Don't have an account yet? <a href="auth-cover-register.html">Sign up here</a>
+                      <p class="mb-0">Don't have an account yet? <a href="register.php">Sign up here</a>
                       </p>
                     </div>
                   </div>

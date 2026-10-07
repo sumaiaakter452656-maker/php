@@ -21,105 +21,9 @@
                     <div class="menu-title">Dashboard</div>
                   </a>
                 </li>
-                <li>
-                  <a href="javascript:;" class="has-arrow">
-                    <div class="parent-icon"><span class="material-symbols-outlined">apps</span>
-                    </div>
-                    <div class="menu-title">Application</div>
-                  </a>
-                  <ul>
-                    <li> <a href="app-emailbox.html"><span class="material-symbols-outlined">arrow_right</span>Email</a>
-                    </li>
-                    <li> <a href="app-chat-box.html"><span class="material-symbols-outlined">arrow_right</span>Chat Box</a>
-                    </li>
-                    <li> <a href="app-file-manager.html"><span class="material-symbols-outlined">arrow_right</span>File Manager</a>
-                    </li>
-                    <li> <a href="app-contact-list.html"><span class="material-symbols-outlined">arrow_right</span>Contatcs</a>
-                    </li>
-                    <li> <a href="app-to-do.html"><span class="material-symbols-outlined">arrow_right</span>Todo List</a>
-                    </li>
-                    <li> <a href="app-invoice.html"><span class="material-symbols-outlined">arrow_right</span>Invoice</a>
-                    </li>
-                    <li> <a href="app-fullcalender.html"><span class="material-symbols-outlined">arrow_right</span>Calendar</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-label">UI Elements</li>
-                <li>
-                  <a href="javascript:;" class="has-arrow">
-                    <div class="parent-icon"><span class="material-symbols-outlined">widgets</span>
-                    </div>
-                    <div class="menu-title">Widgets</div>
-                  </a>
-                  <ul>
-                    <li> <a href="widget-data.html"><span class="material-symbols-outlined">arrow_right</span>Data Widget</a>
-                    </li>
-                    <li> <a href="widget-static.html"><span class="material-symbols-outlined">arrow_right</span>Widget Static</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="javascript:;" class="has-arrow">
-                    <div class="parent-icon"><span class="material-symbols-outlined">shopping_cart</span>
-                    </div>
-                    <div class="menu-title">eCommerce</div>
-                  </a>
-                  <ul>
-                    <li> <a href="ecommerce-add-product.html"><span class="material-symbols-outlined">arrow_right</span>Add Product</a>
-                    </li>
-                    <li> <a href="ecommerce-products.html"><span class="material-symbols-outlined">arrow_right</span>Products</a>
-                    </li>
-                    <li> <a href="ecommerce-customers.html"><span class="material-symbols-outlined">arrow_right</span>Customers</a>
-                    </li>
-                    <li> <a href="ecommerce-customer-details.html"><span class="material-symbols-outlined">arrow_right</span>Customer Details</a>
-                    </li>
-                    <li> <a href="ecommerce-orders.html"><span class="material-symbols-outlined">arrow_right</span>Orders</a>
-                    </li>
-                    <li> <a href="ecommerce-customer-details.html"><span class="material-symbols-outlined">arrow_right</span>Order Details</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a class="has-arrow" href="javascript:;">
-                    <div class="parent-icon"><span class="material-symbols-outlined">redeem</span>
-                    </div>
-                    <div class="menu-title">Components</div>
-                  </a>
-                  <ul>
-                    <li> <a href="component-alerts.html"><span class="material-symbols-outlined">arrow_right</span>Alerts</a>
-                    </li>
-                    <li> <a href="component-accordions.html"><span class="material-symbols-outlined">arrow_right</span>Accordions</a>
-                    </li>
-                    <li> <a href="component-badges.html"><span class="material-symbols-outlined">arrow_right</span>Badges</a>
-                    </li>
-                    <li> <a href="component-buttons.html"><span class="material-symbols-outlined">arrow_right</span>Buttons</a>
-                    </li>
-                    <li> <a href="component-cards.html"><span class="material-symbols-outlined">arrow_right</span>Cards</a>
-                    </li>
-                    <li> <a href="component-lightbox.html"><span class="material-symbols-outlined">arrow_right</span>Lightbox</a>
-                    </li>
-                    <li> <a href="component-carousels.html"><span class="material-symbols-outlined">arrow_right</span>Carousels</a>
-                    </li>
-                    <li> <a href="component-list-groups.html"><span class="material-symbols-outlined">arrow_right</span>List Groups</a>
-                    </li>
-                    <li> <a href="component-media-object.html"><span class="material-symbols-outlined">arrow_right</span>Media Objects</a>
-                    </li>
-                    <li> <a href="component-modals.html"><span class="material-symbols-outlined">arrow_right</span>Modals</a>
-                    </li>
-                    <li> <a href="component-navs-tabs.html"><span class="material-symbols-outlined">arrow_right</span>Navs & Tabs</a>
-                    </li>
-                    <li> <a href="component-paginations.html"><span class="material-symbols-outlined">arrow_right</span>Pagination</a>
-                    </li>
-                    <li> <a href="component-popovers-tooltips.html"><span class="material-symbols-outlined">arrow_right</span>Popovers & Tooltips</a>
-                    </li>
-                    <li> <a href="component-progress-bars.html"><span class="material-symbols-outlined">arrow_right</span>Progress</a>
-                    </li>
-                    <li> <a href="component-spinners.html"><span class="material-symbols-outlined">arrow_right</span>Spinners</a>
-                    </li>
-                    <li> <a href="component-notifications.html"><span class="material-symbols-outlined">arrow_right</span>Notifications</a>
-                    </li>
-                  </ul>
-                </li>
+               
+               
+                  
                 <li>
                   <a class="has-arrow" href="javascript:;">
                     <div class="parent-icon"><span class="material-symbols-outlined">add_reaction</span>
@@ -329,7 +233,7 @@
                    <img src="assets/images/avatars/01.png" alt="">
                 </div>
                 <div class="user-info">
-                  <h5 class="mb-0 user-name">Jhon Maxwell</h5>
+                <h5 class="mb-0 user-name"><?php echo $_SESSION['name']; ?></h5>
                   <p class="mb-0 user-designation">UI Engineer</p>
                 </div>
               </div>
@@ -357,7 +261,7 @@
                 <li>
                   <div class="dropdown-divider mb-0"></div>
                 </li>
-                <li><a class="dropdown-item" href="javascript:;"><span class="material-symbols-outlined me-2">
+                <li><a class="dropdown-item" href="logout.php"><span class="material-symbols-outlined me-2">
                   logout
                   </span><span>Logout</span></a>
                 </li>
