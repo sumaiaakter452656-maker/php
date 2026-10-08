@@ -22,7 +22,7 @@
                   </a>
                 </li>
                
-                        <!--student from-->
+               <!--student form-->
 
 
                 <li>
@@ -32,7 +32,7 @@
                     <div class="menu-title">Tables</div>
                   </a>
                   <ul>
-                    <li> <a href="oop_crud\index.php"><span class="material-symbols-outlined">arrow_right</span>Basic Table</a>
+                    <li> <a href="oop_crud\index.php"><span class="material-symbols-outlined">arrow_right</span>student Table</a>
                     </li>
                     
                   </ul>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="user-info">
                 <h5 class="mb-0 user-name"><?php echo $_SESSION['name']; ?></h5>
-                  <p class="mb-0 user-designation">UI Engineer</p>
+                  <p class="mb-0 user-designation">Engineer</p>
                 </div>
               </div>
               <ul class="dropdown-menu dropdown-menu-end">
