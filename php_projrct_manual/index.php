@@ -2,18 +2,31 @@
 session_start();
 if(isset($_POST['login_button'])){
     extract($_POST);
-    $password = md5($password);
+    $password = Sha1($password);
+    //$password = md5($password);
+    //$hashed_password = password_hash($password, PASSWORD_DEFAULT);
     include_once 'dbconfig.php';
 
     $result = $conn->query("SELECT * FROM `users` WHERE email = '$email' AND password = '$password'");
 
-    //$row =$ result->fetch_assoc();
+    $row =$result->fetch_assoc();
     
     if($result->num_rows > 0){
       //sesssion_start();
         $_SESSION['name'] = $result->fetch_assoc()['name'];
         $_SESSION['email'] = $email;
-        header("Location: dashboard.php");
+        if($row['role'] == 'admin'){
+          $_SESSION['url'] = 'dashboard_admin.php';
+        header("Location: dashboard_admin.php");
+        }else if($row['role'] == 'customer'){
+          $_SESSION['url'] = 'dashboard_customer.php';
+        header("Location: dashboard_customer.php");
+        }else if($row['role'] == 'staff'){
+          $_SESSION['url'] = 'dashboard_staff.php';
+        header("Location: dashboard_staff.php");
+        }
+        
+        
         exit;
     } else {
         $login_error = "Login Failed";
@@ -95,7 +108,8 @@ if(isset($_POST['login_button'])){
                   <div class="col-12">
                     <label for="inputChoosePassword" class="form-label">Password</label>
                     <div class="input-group" id="show_hide_password">
-                      <input type="password" class="form-control border-end-0  border-3" id="inputChoosePassword" name="password" value="<?php if(isset($_POST['password'])) echo $_POST['password']; ?>"  placeholder="Enter Password"> 
+                      <input type="password" class="form-control border-end-0  border-3" id="inputChoosePassword" name="password" value="<?php
+                       if(isset($_POST['password'])) echo $_POST['password']; ?>"  placeholder="Enter Password"> 
                       <a href="javascript:;" class="input-group-text bg-transparent  border-3"><i class="bi bi-eye-slash-fill"></i></a>
                     </div>
                   </div>
