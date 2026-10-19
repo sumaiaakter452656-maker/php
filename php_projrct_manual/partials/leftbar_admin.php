@@ -15,7 +15,7 @@
               <!--navigation-->
               <ul class="metismenu" id="menu">
                 <li>
-                  <a href="index.html">
+                  <a href="dashboard_admin.php">
                     <div class="parent-icon"><span class="material-symbols-outlined">home</span>
                     </div>
                     <div class="menu-title">Dashboard</div>
@@ -29,12 +29,15 @@
                   <a class="has-arrow" href="javascript:;">
                     <div class="parent-icon"><span class="material-symbols-outlined">backup_table</span>
                     </div>
-                    <div class="menu-title">Tables</div>
+                    <div class="menu-title">Servies</div>
                   </a>
                   <ul>
                     <li> <a href="oop_crud\index.php"><span class="material-symbols-outlined">arrow_right</span>student Table</a>
                     </li>
-                    
+                    <li> <a href="new_servies.php"><span class="material-symbols-outlined">arrow_right</span>New servies</a>
+                    </li>
+                    <li> <a href="manage_servies.php"><span class="material-symbols-outlined">arrow_right</span>Manage servies</a>
+                    </li>
                   </ul>
                 </li>
                 

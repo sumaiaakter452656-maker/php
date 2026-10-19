@@ -2,7 +2,7 @@
 <?php
  session_start();
  if($_SESSION['email']!=true){
-    header("location: index.php");
+    header("Location: index.php");
  }
 ?>
 

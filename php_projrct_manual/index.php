@@ -13,15 +13,19 @@ if(isset($_POST['login_button'])){
     
     if($result->num_rows > 0){
       //sesssion_start();
-        $_SESSION['name'] = $result->fetch_assoc()['name'];
+        $_SESSION['name'] = $row['name'];
         $_SESSION['email'] = $email;
+        $_SESSION['role']= $row['role'];
+
         if($row['role'] == 'admin'){
           $_SESSION['url'] = 'dashboard_admin.php';
         header("Location: dashboard_admin.php");
-        }else if($row['role'] == 'customer'){
+        }
+        else if($row['role'] == 'customer'){
           $_SESSION['url'] = 'dashboard_customer.php';
         header("Location: dashboard_customer.php");
-        }else if($row['role'] == 'staff'){
+        }
+        else if($row['role'] == 'staff'){
           $_SESSION['url'] = 'dashboard_staff.php';
         header("Location: dashboard_staff.php");
         }

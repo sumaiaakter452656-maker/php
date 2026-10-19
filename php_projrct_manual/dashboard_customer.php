@@ -2,7 +2,7 @@
 <?php
  session_start();
  if($_SESSION['email']!=true){
-    header("location: index.php");
+    header("Location: index.php");
  }
       if($_SESSION['role'] != 'customer'){
     header("Location: unauthorize.php");}
@@ -32,7 +32,7 @@
     <!--end header-->
 
     <!--start sidebar-->
-    <?php include 'partials/leftbar.php' ; ?>
+    <?php include 'partials/leftbar_customer.php' ; ?>
      <!--end sidebar-->
 
 
