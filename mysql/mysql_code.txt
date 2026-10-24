@@ -1,0 +1,54 @@
+SELECT * FROM  employees;
+
+
+SELECT `employeeNumber`, `lastName`, `firstName`, `extension`, `email`, `officeCode`, `reportsTo`, `jobTitle` FROM  employees 
+
+
+SELECT * FROM  employees WHERE employeeNumber = '1611'
+
+
+SELECT  employeeNumber , lastName, email, jobtitle  FROM  employees WHERE employeeNumber = '1611'
+
+
+SELECT  employeeNumber , lastName, email, jobtitle  FROM  employees WHERE  jobtitle = 'Sales Rep' AND officeCode = '3'
+
+
+SELECT  employeeNumber , lastName, email, officeCode, jobtitle  FROM  employees WHERE  jobtitle = 'Sales Rep' AND officeCode < '4'
+
+
+SELECT  employeeNumber , lastName, email, officeCode, jobtitle  FROM  employees WHERE  jobtitle = 'Sales Rep' AND officeCode in (1,4)
+
+
+
+
+
+
+
+
+
+SELECT  employeeNumber , lastName, firstname, jobtitle , city, country, phone  FROM  employees , offices WHERE  offices.officeCode = employees.officeCode 
+
+
+SELECT  employeeNumber , lastName, firstname, jobtitle , city, country, phone  FROM  employees , offices WHERE  offices.officeCode = employees.officeCode AND offices.officeCode = 5
+
+
+
+
+
+
+
+
+
+INSERT INTO offices ( officeCode, city , phone, addressLine1, addressLine2, state, country, postalCode, territory)
+VALUES ('8', 'Dhaka' , '98970978' , 'Mirpur Road' , 'Metroshopping Mall' , ' ' , 'Bangladesh' , '1207' , 'NA' );
+
+
+
+INSERT INTO employees ( employeeNumber , lastName, firstname , extension, email, officeCode, reportsTo, jobTitle)
+VALUES ( '1703' , ' Uddin' , 'Rokon' , '103' , 'rokon@gmail.com' , '8' , '1056' , 'Web Developer')
+
+INSERT INTO employees VALUES ( '1704' , ' Uddin' , 'Mahir' , '104' , 'mahir@gmail.com' , '8' , '1056' , 'Web Developer')
+
+
+
+
