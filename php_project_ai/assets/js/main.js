@@ -3,11 +3,6 @@ $(function() {
 	"use strict";
 
 
-// app dropdown
-new PerfectScrollbar(".app-container")
-new PerfectScrollbar(".header-notifications-list")
-
-
 $(".sidebar-close").on("click", function() {
 	$("body").removeClass("toggled")
 })
@@ -100,7 +95,7 @@ $("#ShadowTheme").on("click", function() {
 
 $(".dark-mode").click(function () {
 	$("html").attr("data-bs-theme" , function(i, v){
-	  return v === 'dark' ? 'light1' : 'dark';
+	  return v === 'dark' ? 'light' : 'dark';
 	})
 })
 

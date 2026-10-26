@@ -1,0 +1,13 @@
+#####################
+User Authentication 
+#####################
+Here is my project inside php_project_ai. My project database is php_project_ai_db.
+I have a file dbconfig.php for database connection. Please write database connection script
+
+
+Create a user table. 
+There is a login form in index.php. Create user Authentication with that login form. After logging in user will be redirected to dashboard.php 
+
+Please regenerate the Authentication with Procedural style. Don't use PDO, Prepared Statement and OOP.
+
+use md5 for password hashing
