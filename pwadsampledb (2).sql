@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 28, 2026 at 06:54 AM
+-- Generation Time: Oct 31, 2026 at 06:57 AM
 -- Server version: 8.4.3
 -- PHP Version: 8.3.36
 
@@ -186,15 +186,15 @@ INSERT INTO `customers` (`customerNumber`, `customerName`, `contactLastName`, `c
 -- (See below for the actual view)
 --
 CREATE TABLE `customers_payments_view` (
-`customerNumber` int
-,`customerName` varchar(50)
-,`phone` varchar(50)
-,`addressLine1` varchar(50)
-,`city` varchar(50)
-,`state` varchar(50)
-,`country` varchar(50)
-,`paymentdate` date
+`addressLine1` varchar(50)
 ,`amount` decimal(10,2)
+,`city` varchar(50)
+,`country` varchar(50)
+,`customerName` varchar(50)
+,`customerNumber` int
+,`paymentdate` date
+,`phone` varchar(50)
+,`state` varchar(50)
 );
 
 -- --------------------------------------------------------
@@ -204,15 +204,15 @@ CREATE TABLE `customers_payments_view` (
 -- (See below for the actual view)
 --
 CREATE TABLE `customer_view_2` (
-`customerNumber` int
-,`customerName` varchar(50)
-,`phone` varchar(50)
-,`addressLine1` varchar(50)
-,`city` varchar(50)
-,`state` varchar(50)
-,`country` varchar(50)
-,`paymentdate` date
+`addressLine1` varchar(50)
 ,`amount` decimal(10,2)
+,`city` varchar(50)
+,`country` varchar(50)
+,`customerName` varchar(50)
+,`customerNumber` int
+,`paymentdate` date
+,`phone` varchar(50)
+,`state` varchar(50)
 );
 
 -- --------------------------------------------------------
