@@ -7,7 +7,7 @@ $countries = array(
     "Australia"  => "Canberra"
 );
 
-ksort($countries);   // country name (key) অনুযায়ী sort
+ksort($countries);
 
 foreach ($countries as $country => $capital) {
     echo "Country: $country, Capital: $capital <br>";

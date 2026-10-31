@@ -7,7 +7,7 @@ $students = array(
     "Fatema" => 79
 );
 
-// সর্বোচ্চ score খোঁজা
+
 $maxScore = 0;
 $topStudent = "";
 
@@ -20,7 +20,7 @@ foreach ($students as $name => $score) {
 ?>
 
 <h2>Result Sheet</h2>
-<table border="1" cellpadding="8">
+<table cellpadding="8">
     <tr>
         <th>Student Name</th>
         <th>Score</th>
