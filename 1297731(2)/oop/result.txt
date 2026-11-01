@@ -1,0 +1,4 @@
+ID, Name,   Batch,  Data
+101,    sumaia, 73, pass 
+102,    farjana,    73, pass
+103,    samia,  73, fail
