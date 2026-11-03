@@ -8,7 +8,7 @@ $students = array(
 );
 
 
-$maxScore = 0;
+$maxScore = "";
 $topStudent = "";
 
 foreach ($students as $name => $score) {
@@ -18,9 +18,7 @@ foreach ($students as $name => $score) {
     }
 }
 ?>
-
-<h2>Result Sheet</h2>
-<table cellpadding="8">
+<table border="1" cellpadding="8">
     <tr>
         <th>Student Name</th>
         <th>Score</th>
@@ -33,5 +31,5 @@ foreach ($students as $name => $score) {
     <?php } ?>
 </table>
 
-<p>Highest Score: <b><?php echo $maxScore; ?></b></p>
-<p>Top Student: <b><?php echo $topStudent; ?></b></p>
+Highest Score:<?php echo $maxScore; ?><br>
+Top Student:<?php echo $topStudent; ?>

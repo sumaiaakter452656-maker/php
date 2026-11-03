@@ -1,17 +1,22 @@
-<form method="post">
-    Number: <input type="number" name="num">
-    <button type="submit">Check</button>
-</form>
-<?php
-if ($_POST) {
-    $n = $_POST["num"];
-    $isPrime = $n > 1;
-    for ($i = 2; $i <= sqrt($n); $i++) {
-        if ($n % $i == 0) {
-             $isPrime = false;
-             break; 
-         }
+  <form action="" method="post">
+    Number: <input type="number" name="number">
+    <button type="submit" name="submit">Check</button>
+    </form>
+    <?php
+    if(isset($_POST['submit'])){
+        $num =$_POST['number'];
+
+        if ($num ==1){
+            echo "is not a Prime number";
+        }elseif($num ==2 ){
+            echo "is a Prime number";
+        }else{
+            for($i=2; $i<$num ;$i++){
+                if($num%$i==0){
+                    echo "is not a Prime number";
+                    return;
+                }
+            } echo "is a Prime number";
+        }
     }
-    echo $isPrime ? "$n is a Prime number" : "$n is not a Prime number";
-}
-?>
+    ?>

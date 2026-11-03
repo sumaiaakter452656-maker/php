@@ -16,13 +16,13 @@ if ($_POST) {
     $d = $_POST["d"];
     $e = $_POST["e"];
 
-    $largest = $a;                       // ধরে নিলাম প্রথমটাই বড়
+    $largest = $a;                       
 
-    if ($b > $largest) $largest = $b;    // b বড় হলে largest = b
-    if ($c > $largest) $largest = $c;    // c বড় হলে largest = c
-    if ($d > $largest) $largest = $d;    // d বড় হলে largest = d
-    if ($e > $largest) $largest = $e;    // e বড় হলে largest = e
+    if ($b > $largest) $largest = $b;    
+    if ($c > $largest) $largest = $c;    
+    if ($d > $largest) $largest = $d;    
+    if ($e > $largest) $largest = $e;   
 
-    echo "Largest number is: " . $largest;
+    echo "Largest number is: " . $largest ;
 }
 ?>
