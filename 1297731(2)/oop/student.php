@@ -5,12 +5,12 @@ class student{
     public $Batch;
     public $Data;
 
-    public function __construct($file) {
-        $fhandle =file($file);
-        $this->Data =$fhandle;
-        return $this->Data;
+    // public function __construct($file) {
+    //     $fhandle =file($file);
+    //     $this->Data =$fhandle;
+    //     return $this->Data;
         
-    }
+    
 
     public function result($ID){
         foreach($this->Data as $line){

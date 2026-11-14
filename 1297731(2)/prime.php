@@ -7,7 +7,7 @@ if ($_POST) {
     $n = $_POST["num"];
     $isPrime = $n > 1;
     for ($i = 2; $i <= sqrt($n); $i++) {
-        if ($n % $i == 0) {
+        if ($n % $i == 0) {zzz
              $isPrime = false;
              break; 
          }
